@@ -1,0 +1,43 @@
+create store 
+configureStore
+
+const store = configureStore({
+    resucer:{
+        userSlice:slice
+    }
+})
+/////////////
+create slice
+createSlice reduxtoolkit
+
+{
+    name:"",
+    insitialState:{
+        //value
+        count:0,
+        user:"name"
+    },
+    reducer:{
+        //function
+        increaseCount:(state,action)=>{
+            state.count = action.payload
+        }
+    }
+}
+
+export const{increaseCount}=slice.actions
+export default slice.reducer
+//////////////////////
+
+main.js->Provider
+wap
+
+///////
+footer 
+
+import useSelector useDepatch react-redux
+
+
+const result = userSelector((state)->state.userSlice.count)
+<button>
+
